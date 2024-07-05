@@ -17,15 +17,15 @@ class Person {
 
     public getDetails(): string {
         return `Name: ${this.name}, Age: ${this.age}`;
-        return `Name: ${this.name}, Age: ${this.age}`;
     }
 }
 
 let person1 = new Person('a', 12);
 console.log(person1.getDetails())
 
-person1.setName("Bob");
+person1.setName("Jeff");
 
 person1.setAge(35);
 
 console.log(person1.getDetails());
+
