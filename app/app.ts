@@ -23,7 +23,7 @@ class Person {
 let person1 = new Person('a', 12);
 console.log(person1.getDetails())
 
-person1.setName("Jeff");
+person1.setName("Jff");
 
 person1.setAge(35);
 
