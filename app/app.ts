@@ -8,11 +8,34 @@ submitBtn.addEventListener('click', () => {
 
     const zahl1: number = parseFloat(zahl1Input.value);
     const zahl2: number = parseFloat(zahl2Input.value);
+    const operation: string = (document.querySelector('input[name="operation"]:checked') as HTMLInputElement)?.value;
+    let output: number = 0;
+    let operator: string = ' ';
 
-    console.log(zahl1);
-    console.log(zahl2);
+    switch(operation){
+        case 'Add':{
+            output = zahl1+zahl2
+            operator = '+'
+            break;
+        }
+        case 'Sub':{
+            output = zahl1-zahl2
+            operator = '-'
+            break;
+        }
+        case 'Mult':{
+            output = zahl1*zahl2
+            operator = '*'
+            break;
+        }
+        case 'Div':{
+            output = zahl1/zahl2
+            operator = '/'
+            break;
+        }
+    }
+    resultDiv.innerHTML = `${zahl1} ${operator} ${zahl2} = ${output}`;
 
-    resultDiv.innerHTML = `Zahl 1: ${zahl1} Zahl 2: ${zahl2}`;
 
 });
 ;
