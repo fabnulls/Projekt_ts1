@@ -1,31 +1,18 @@
-class Person {
-    private name: string;
-    private age: number;
 
-    constructor(name: string, age: number) {
-        this.name = name;
-        this.age = age;
-    }
+const zahl1Input: HTMLInputElement = document.getElementById('zahl1') as HTMLInputElement;
+const zahl2Input: HTMLInputElement = document.getElementById('zahl2') as HTMLInputElement;
+const submitBtn: HTMLButtonElement = document.getElementById('submitBtn') as HTMLButtonElement;
+const resultDiv: HTMLDivElement = document.getElementById('result') as HTMLDivElement;
 
-    public setName(newName: string): void {
-        this.name = newName;
-    }
+submitBtn.addEventListener('click', () => {
 
-    public setAge(newAge: number): void {
-        this.age = newAge;
-    }
+    const zahl1: number = parseFloat(zahl1Input.value);
+    const zahl2: number = parseFloat(zahl2Input.value);
 
-    public getDetails(): string {
-        return `Name: ${this.name}, Age: ${this.age}`;
-    }
-}
+    console.log(zahl1);
+    console.log(zahl2);
 
-let person1 = new Person('a', 12);
-console.log(person1.getDetails())
+    resultDiv.innerHTML = `Zahl 1: ${zahl1} Zahl 2: ${zahl2}`;
 
-person1.setName("Jff");
-
-person1.setAge(35);
-
-console.log(person1.getDetails());
-
+});
+;
